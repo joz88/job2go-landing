@@ -5,6 +5,19 @@
     --dark-grey: #1e293b; /* Gris oscuro para texto */
     --white: #ffffff;
 }
+/* Reglas de oro para evitar el desbordamiento horizontal */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+img {
+    height: auto; /* Evita que las imágenes se deformen */
+}
+
+body {
+    overflow-x: hidden; /* Evita que salga una barra de desplazamiento lateral molesta */
+}
 
 body { font-family: 'Inter', sans-serif; margin: 0; color: var(--dark-grey); background-color: var(--light-grey); line-height: 1.6; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
@@ -98,3 +111,30 @@ header { background-color: var(--white); padding: 20px 0; box-shadow: 0 2px 4px 
 
 .quote { font-size: 1.3em; font-style: italic; color: #334155; }
 .author { margin-top: 15px; color: var(--blue-cobalt); }
+
+/* --- RESPONSIVE DESIGN (PARA PANTALLAS MÓVILES) --- */
+
+@media (max-width: 768px) {
+    /* Ajuste de Hero: Menos padding y texto más compacto */
+    .hero { height: auto; padding: 60px 20px; text-align: center; }
+    .hero h1 { font-size: 1.8rem; }
+    
+    /* Sección Clientes: Cambiar de 4 columnas a 2 para que no se amontonen */
+    .clients-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    
+    /* Sección Vacantes: Una sola columna en móvil */
+    .job-cards-grid { grid-template-columns: 1fr; gap: 15px; }
+    
+    /* Navegación: Apilar botones */
+    .header-content { flex-direction: column; gap: 15px; }
+    
+    /* Sección Cómo operamos: Apilar pasos */
+    .work-content { flex-direction: column; }
+    .process-steps { grid-template-columns: 1fr; }
+}
+
+/* Ajustes menores para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .clients-grid { grid-template-columns: repeat(4, 1fr); }
+    .job-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
