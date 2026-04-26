@@ -1,0 +1,28 @@
+:root {
+    /* --- PALETA DE COLORES --- */
+    --primary-color: #1e3a8a;    /* Deep Navy: Autoridad y confianza */
+    --secondary-color:  #636E72;  /* Vibrant Orange: Acción ("Go") y modernidad */
+    --accent-color: #e0f2fe;     /* Light Sky: Fondos suaves para secciones */
+    
+    --text-dark: #1e293b;        /* Slate: Texto muy legible */
+    --text-light: #64748b;       /* Gray: Texto secundario */
+    --white: #ffffff;
+    --bg-page: #f8fafc;          /* Off-white: Fondo de página profesional */
+
+    /* --- TIPOGRAFÍA --- */
+    /* Usaremos una pila de fuentes moderna, limpia y sans-serif */
+    --font-main: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+    /* --- INTERFAZ --- */
+    --border-radius: 10px;       /* Bordes ligeramente redondeados: amigables pero serios */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Base resets para asegurar consistencia */
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: var(--bg-page);
+    line-height: 1.6;
+}

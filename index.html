@@ -3,146 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job2go | Conectando Talento de Alto Nivel</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Job2go | Soluciones de Talento Industrial y Operativo.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/branding.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <header>
-        <div class="container header-content">
-            <a href="/" class="logo-link">
-                <img src="assets/img/logo.svg" alt="Job2go Logo" class="logo-img">
+    <header id="header">
+        <div class="container header-row">
+            <a href="#" class="brand">
+                <img src="assets/img/logo.svg" alt="Job2go" width="170" height="54" class="brand-logo">
             </a>
-            <nav class="nav-buttons">
-                <a href="#empresa" class="btn btn-secondary">Soy Empresa</a>
-                <a href="#vacantes" class="btn btn-primary">Busco Empleo</a>
+            <nav aria-label="Principal">
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#vacancies">Vacantes</a></li>
+                    <li><a href="#location">Contacto</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="background-image: url('assets/img/hero-connection.jpg');">
-        <div class="container hero-content">
-            <h1>Impulsa tu éxito conectando con el talento ideal.</h1>
-            <p>En Job2go conectamos a las empresas más innovadoras con el talento que realmente necesitan.</p>
-            <div class="hero-ctas">
-                <a href="#vacantes" class="btn btn-primary btn-lg">Ver Vacantes</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="clients-section container">
-        <h3 class="section-title">Empresas que confían en nosotros</h3>
-        <div class="clients-grid">
-            <img src="assets/img/logomacor.jpg" alt="Logo Macor" class="client-logo">
-            <img src="assets/img/logogonher.png" alt="Logo Gonher" class="client-logo">
-            <img src="assets/img/logogenesis.jpg" alt="Logo Genesis" class="client-logo">
-            <img src="assets/img/logoenerya.jpg" alt="Logo Enerya" class="client-logo">
-        </div>
-    </section>
-
-    <section class="how-we-work container">
-        <h2 class="section-title">Cómo operamos</h2>
-        <div class="work-content">
-            <img src="assets/img/how-we-work-diagram.png" alt="Diagrama de flujo de Job2go" class="proceso-img">
-            <div class="process-steps">
-                <div class="step">
-                    <span class="step-number">01</span>
-                    <h4>Postulación</h4>
-                    <p>Elige la vacante que mejor se adapte a tu perfil y envíanos tu información.</p>
+    <main>
+        <section id="hero">
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="kicker">Soluciones de Talento Industrial y Operativo.</p>
+                    <h1 data-user="empresa">Conecta con talento estrategico para escalar tu operacion.</h1>
+                    <h1 data-user="candidato" class="is-hidden">¿Buscas tu próxima oportunidad laboral?</h1>
+                    <p data-user="empresa">Sabemos que la producción no puede detenerse. Cubrimos vacantes de operadores generales, soldadores, electromecánicos y personal de planta con la rapidez y filtros de calidad que tu operacion exige.</p>
+                    <p data-user="candidato" class="is-hidden">Encuentra empleo estable en empresas de primer nivel. Ya sea que busques ser operador, soldador o técnico, estamos listos para vincularte con la vacante ideal.</p>
+                    <a href="https://wa.me/528132581198?text=Hola,%20me%20interesa%20solicitar%20asesoría%20para%20reclutamiento%20en%20mi%20empresa" class="btn btn-primary" data-user="empresa" target="_blank">Solicitar asesoria</a>
+                    <a href="#vacancies" class="btn btn-primary is-hidden" data-user="candidato">Ver vacantes activas</a>
                 </div>
-                <div class="step">
-                    <span class="step-number">02</span>
-                    <h4>Validación</h4>
-                    <p>Nuestro equipo de expertos evalúa tus habilidades para hacer el match ideal.</p>
-                </div>
-                <div class="step">
-                    <span class="step-number">03</span>
-                    <h4>Contratación</h4>
-                    <p>Te conectamos directamente con las empresas para concretar tu nuevo empleo.</p>
+                <div class="hero-media">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Equipo profesional en sala de juntas" width="620" height="420">
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="vacantes" class="vacancies-section container">
-        <h2 class="section-title">Oportunidades Disponibles</h2>
-        <div class="job-cards-grid" id="job-container">
-            </div>
-    </section>
+        </section>
 
-    <section class="testimonials container">
-        <h2 class="section-title">Historias de éxito</h2>
-        <div class="carousel-container" id="carousel">
+        <section id="user-switcher">
+            <div class="container">
+                <h2>Selecciona tu perfil</h2>
+                <div class="switcher-controls" role="tablist" aria-label="Tipo de usuario">
+                    <button type="button" class="switch-btn active" data-user-target="empresa" aria-selected="true">Empresa</button>
+                    <button type="button" class="switch-btn" data-user-target="candidato" aria-selected="false">Candidato</button>
+                </div>
             </div>
-    </section>
-    
-    <script>
-        const testimonios = [
-            { nombre: "Ana García", puesto: "Desarrolladora Frontend", cita: "Gracias a Job2go encontré el match perfecto. El proceso fue rápido y humano." },
-            { nombre: "Luis Martínez", puesto: "Soldador Industrial", cita: "Increíble seguimiento. Me ayudaron a mejorar mi CV y conseguí empleo en una semana." },
-            { nombre: "Sofía Torres", puesto: "Auxiliar de Almacén", cita: "La atención personalizada de Job2go marca la diferencia. Totalmente recomendado." }
-        ];
-    
-        const container = document.getElementById('carousel');
+        </section>
+
+        <section id="logo-cloud">
+            <div class="container">
+                <h2>Empresas que confian en nosotros</h2>
+                <div class="logo-grid">
+                    <img src="assets/img/logomacor.jpg" alt="Macor" width="180" height="90">
+                    <img src="assets/img/logogonher.png" alt="Gonher" width="180" height="90">
+                    <img src="assets/img/logogenesis.jpg" alt="Genesis" width="180" height="90">
+                    <img src="assets/img/logoenerya.jpg" alt="Enerya" width="180" height="90">
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 data-user="empresa">Servicios para empresas</h2>
+                <h2 data-user="candidato" class="is-hidden">Servicios para candidatos</h2>
         
-        // Inyectar HTML
-        container.innerHTML = testimonios.map((t, i) => `
-            <div class="testimonial-card ${i === 0 ? 'active' : ''}">
-                <p class="quote">"${t.cita}"</p>
-                <p class="author"><strong>${t.nombre}</strong><br>${t.puesto}</p>
+                <div class="service-grid" data-user="empresa">
+                    <article class="service-card">
+                        <h3>Reclutamiento industrial</h3>
+                        <p>Búsqueda directa de operadores, soldadores y técnicos clave para mantener tu línea de producción activa.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Evaluación técnica</h3>
+                        <p>Validación de habilidades prácticas y aptitudes específicas necesarias para el desempeño en planta.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Integración inmediata</h3>
+                        <p>Gestión rápida y eficaz desde el contacto inicial hasta el ingreso del personal a tus instalaciones.</p>
+                    </article>
+                </div>
+        
+                <div class="service-grid is-hidden" data-user="candidato">
+                    <article class="service-card">
+                        <h3>Vacantes reales</h3>
+                        <p>Acceso a oportunidades de empleo estable en empresas de primer nivel ajustadas a tu perfil y experiencia.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Asesoría de perfil</h3>
+                        <p>Te ayudamos a preparar tu historial y habilidades para que destaques y consigas el puesto que buscas.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Gestión de contratación</h3>
+                        <p>Te acompañamos y mantenemos informado durante todo el proceso hasta que asegures tu lugar.</p>
+                    </article>
+                </div>
             </div>
-        `).join('');
-    
-        // Lógica automática
-        let currentIndex = 0;
-        const cards = document.querySelectorAll('.testimonial-card');
-    
-        setInterval(() => {
-            cards[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % testimonios.length;
-            cards[currentIndex].classList.add('active');
-        }, 4000); // 4000ms = 4 segundos
-    </script>
+        </section>
 
-    <footer>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2 data-user="empresa">Testimonios de empresas</h2>
+                <h2 data-user="candidato" class="is-hidden">Testimonios de candidatos</h2>
+                <div class="testimonial-list" data-user="empresa">
+                    <article class="testimonial-item">
+                        <p>"Reducimos nuestro tiempo de cobertura en 40% con perfiles de alta calidad."</p>
+                        <span>Directora de RH, industria manufactura</span>
+                    </article>
+                    <article class="testimonial-item">
+                        <p>"El proceso es claro, consultivo y alineado a nuestros objetivos de negocio."</p>
+                        <span>Gerencia de Operaciones, sector logistica</span>
+                    </article>
+                </div>
+                <div class="testimonial-list is-hidden" data-user="candidato">
+                    <article class="testimonial-item">
+                        <p>"Encontré una vacante alineada a mi perfil en menos de dos semanas."</p>
+                        <span>Analista de Compras</span>
+                    </article>
+                    <article class="testimonial-item">
+                        <p>"Me acompanaron durante entrevista y negociacion, fue una gran experiencia."</p>
+                        <span>Supervisor de Produccion</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="methodology">
+            <div class="container">
+                <h2>Metodologia Job2go</h2>
+                <div class="method-cards">
+                    <article class="method-card">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M12 3v18"/></svg>
+                        <h3>Diagnostico</h3>
+                        <p>Definimos objetivos, perfil y criterios de exito para cada posicion.</p>
+                    </article>
+                    <article class="method-card">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+                        <h3>Validacion</h3>
+                        <p>Evaluamos habilidades tecnicas y competencias para asegurar fit real.</p>
+                    </article>
+                    <article class="method-card">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
+                        <h3>Integracion</h3>
+                        <p>Acompanamos onboarding y seguimiento inicial para resultados sostenibles.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2>Preguntas frecuentes</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>¿Cuanto tarda cubrir una vacante?</summary>
+                        <p>Depende del perfil, pero nuestro tiempo promedio inicial es de 2 a 4 semanas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Las vacantes son solo presenciales?</summary>
+                        <p>No. Gestionamos vacantes presenciales, hibridas y remotas segun requerimiento del cliente.</p>
+                    </details>
+                    <details>
+                        <summary>¿Como inicia el proceso para candidatos?</summary>
+                        <p>Postulacion, validacion de perfil, entrevista y acompanamiento hasta cierre.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats">
+            <div class="container stats-grid">
+                <article class="stat-box">
+                    <p class="stat-value">500+</p>
+                    <p class="stat-label">Vacantes Cubiertas</p>
+                </article>
+                <article class="stat-box">
+                    <p class="stat-value">1,200+</p>
+                    <p class="stat-label">Candidatos Colocados</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="vacancies">
+            <div class="container">
+                <h2>Vacantes disponibles</h2>
+                <div id="vacancies-list" class="vacancies-grid"></div>
+            </div>
+        </section>
+
+        <section id="location">
+            <div class="container location-grid">
+                <div>
+                    <h2>Nuestra oficina</h2>
+                    <p>Las Villas 105, Priv. las villas, Villa de García, Mexico, 66003</p>
+                    <p>Tel: <a href="tel:+528132581198">81 3258 1198</a></p>
+                    <p>Email: <a href="mailto:pablo@job2go.com.mx">pablo@job2go.com.mx</a></p>
+                </div>
+                <div id="mapa">
+                    <iframe
+                        src="https://maps.google.com/maps?q=25.787767,-100.578823&z=15&output=embed"
+                        width="100%"
+                        height="320"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicacion Job2go"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
         <div class="container">
-            <p>&copy; 2023 Job2go. Todos los derechos reservados.</p>
+            <p>Job2go · Soluciones de reclutamiento corporativo</p>
+            <small>© 2026 Job2go. Todos los derechos reservados.</small>
         </div>
     </footer>
 
-    <script>
-        const vacantes = [
-            { titulo: "Ayudante General", empresa: "Gonher", modalidad: "Presencial", sueldo: "$1,813 / sem", visible: true, imagenLogo: "assets/img/logogonher.png" },
-            { titulo: "Soldador Microalambre", empresa: "Macor", modalidad: "Presencial", sueldo: "$3,950 / sem", visible: true, imagenLogo: "assets/img/logomacor.jpg" },
-            { titulo: "Auxiliar de Almacén", empresa: "Genesis", modalidad: "Presencial", sueldo: "$3,140 / sem", visible: true, imagenLogo: "assets/img/logogenesis.jpg" }
-        ];
+    <div id="vacancy-modal" class="vacancy-modal" aria-hidden="true">
+        <div class="vacancy-modal-backdrop" data-modal-close></div>
+        <div class="vacancy-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="vacancy-modal-title">
+            <button type="button" class="vacancy-modal-close" data-modal-close aria-label="Cerrar modal">×</button>
+            <h3 id="vacancy-modal-title"></h3>
+            <p id="vacancy-modal-company" class="modal-company"></p>
+            <p><strong>Ubicación:</strong> <span id="vacancy-modal-location"></span></p>
+            <p><strong>Sueldo:</strong> <span id="vacancy-modal-salary"></span></p>
+            <p><strong>Requisitos:</strong></p>
+            <p id="vacancy-modal-requirements" class="modal-preline"></p>
+            <p><strong>Beneficios:</strong></p>
+            <p id="vacancy-modal-benefits" class="modal-preline"></p>
+            <a id="vacancy-modal-apply" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Postularme</a>
+        </div>
+    </div>
 
-        function renderVacantes(datos) {
-            const container = document.getElementById('job-container');
-            container.innerHTML = datos
-                .filter(v => v.visible)
-                .map(v => `
-                    <div class="job-card">
-                        <div class="card-logo-container">
-                            <img src="${v.imagenLogo}" alt="Logo de ${v.empresa}" class="card-logo-img">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-header">
-                                <h4>${v.titulo}</h4>
-                                <span class="badge">${v.modalidad}</span>
-                            </div>
-                            <p class="text-muted">Empresa: ${v.empresa}</p>
-                            <div class="card-footer">
-                                <span class="salary">${v.sueldo}</span>
-                                <a href="#" class="btn btn-outline">Postularse</a>
-                            </div>
-                        </div>
-                    </div>
-                `).join('');
-        }
-        renderVacantes(vacantes);
-    </script>
+    <script src="js/main.js"></script>
+    <a href="https://wa.me/528132581198" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="35" height="35">
+    </a>
 </body>
 </html>
